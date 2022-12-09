@@ -28,12 +28,15 @@ def clear():
     answer.delete(1.0, "end")
 
 
+#creates window
 window = tk.Tk()
 window.geometry("300x350")
 
+#textbox
 answer = tk.Text(window, width=11, height=2, font=("Impact", 36))
 answer.grid(columnspan=5)
 
+#ALL the buttons for the calculator
 but1 = tk.Button(window, text="1", font=("Impact", 12), command=lambda: input(1), width=6)
 but1.grid(row=4, column=1)
 
@@ -92,5 +95,5 @@ enter = tk.Button(window, text="Enter!", font=("Impact", 12), command=solve, wid
 enter.grid(row=5, column=3, columnspan=2)
 
 
-
+#keeps window open
 window.mainloop()
